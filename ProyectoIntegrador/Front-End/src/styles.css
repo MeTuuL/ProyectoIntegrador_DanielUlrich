@@ -7,6 +7,10 @@
     font-family: 'Work Sans';
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 :root{
     --sideBGColor: #040b14;
     --themeColor: #00A78E;

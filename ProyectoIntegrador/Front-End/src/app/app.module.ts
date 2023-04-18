@@ -10,10 +10,20 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { SobremiComponent } from './components/sobremi/sobremi.component';
 import { SkillsComponent } from './components/skills/skills.component';
-import { CurriculumComponent } from './components/curriculum/curriculum.component';
 import { ProyectoComponent } from './components/proyecto/proyecto.component';
 import { ContactoComponent } from './components/contacto/contacto.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { HttpClientModule } from '@angular/common/http';
+import { HomeComponent } from './components/home/home.component';
+import { LoginComponent } from './components/login/login.component';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms'
+import { interceptorProvider } from './service/interceptor-service';
+import { ExperienciaComponent } from './components/curriculum/experiencia/experiencia.component';
+import { NewExperienciaComponent } from './components/curriculum/experiencia/new-experiencia/new-experiencia.component';
+import { EditExperienciaComponent } from './components/curriculum/experiencia/edit-experiencia/edit-experiencia.component';
+import { EducacionComponent } from './components/curriculum/educacion/educacion.component';
+import { NewEducacionComponent } from './components/curriculum/educacion/new-educacion/new-educacion.component';
+import { EditEducacionComponent } from './components/curriculum/educacion/edit-educacion/edit-educacion.component';
 
 @NgModule({
   declarations: [
@@ -25,16 +35,28 @@ import { FooterComponent } from './components/footer/footer.component';
     NavbarComponent,
     SobremiComponent,
     SkillsComponent,
-    CurriculumComponent,
     ProyectoComponent,
     ContactoComponent,
     FooterComponent,
+    HomeComponent,
+    LoginComponent,
+    ExperienciaComponent,
+    NewExperienciaComponent,
+    EditExperienciaComponent,
+    EducacionComponent,
+    NewEducacionComponent,
+    EditEducacionComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [
+    interceptorProvider
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
