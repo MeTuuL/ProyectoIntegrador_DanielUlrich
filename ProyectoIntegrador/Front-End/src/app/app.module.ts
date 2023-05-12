@@ -24,6 +24,10 @@ import { EditExperienciaComponent } from './components/curriculum/experiencia/ed
 import { EducacionComponent } from './components/curriculum/educacion/educacion.component';
 import { NewEducacionComponent } from './components/curriculum/educacion/new-educacion/new-educacion.component';
 import { EditEducacionComponent } from './components/curriculum/educacion/edit-educacion/edit-educacion.component';
+import { EditSkillComponent } from './components/skills/edit-skill/edit-skill.component';
+import { NewSkillComponent } from './components/skills/new-skill/new-skill.component';
+import { NgCircleProgressModule } from 'ng-circle-progress';
+import { EditProfileComponent } from './components/profile/edit-profile/edit-profile.component';
 
 @NgModule({
   declarations: [
@@ -46,13 +50,18 @@ import { EditEducacionComponent } from './components/curriculum/educacion/edit-e
     EducacionComponent,
     NewEducacionComponent,
     EditEducacionComponent,
+    EditSkillComponent,
+    NewSkillComponent,
+    EditProfileComponent
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    NgCircleProgressModule.forRoot({})
   ],
   providers: [
     interceptorProvider

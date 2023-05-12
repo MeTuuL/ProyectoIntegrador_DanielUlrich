@@ -10,7 +10,6 @@ import { SExperienciaService } from 'src/app/service/s-experiencia.service';
 })
 export class NewExperienciaComponent implements OnInit {
   nombreE: string = '';
-  empresaE: string = '';
   fechaE: string = '';
   descripcionE: string = '';
 
@@ -21,7 +20,7 @@ export class NewExperienciaComponent implements OnInit {
   }
 
   onCreate(): void{
-    const expe = new Experiencia(this.nombreE, this.empresaE, this.fechaE, this.descripcionE);
+    const expe = new Experiencia(this.nombreE, this.fechaE, this.descripcionE);
     this.sExperiencia.save(expe).subscribe(
       {
         next: data=>{

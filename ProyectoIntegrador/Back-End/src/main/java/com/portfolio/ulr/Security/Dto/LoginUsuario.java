@@ -5,7 +5,7 @@
  */
 package com.portfolio.ulr.Security.Dto;
 
-import javax.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotBlank;
 
 /**
  *
